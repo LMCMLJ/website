@@ -6,12 +6,16 @@ router.get('/', function(req, res, next) {
   res.redirect('/homepage/');
 });
 
-router.get('/user', function(req, res) {
+router.get('/users', function(req, res) {
   res.redirect('/users/');
 });
 
 router.get('/blog', function(req, res) {
   res.redirect('/blog/');
+});
+
+router.get('/snake', function(req, res) {
+  res.render('snake');
 });
 
 module.exports = router;
