@@ -1,15 +1,53 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: black;
+  padding-top: 0px;
+  margin-top: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+nav {
+
 }
 
 a {
+  text-decoration: none;
   color: #00B7FF;
 }
 
-#nav_button {
+article {
+  margin-top: 0px;
+}
+
+#header {
+
+  margin: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #000000;
+}
+
+.header_text {
   width: 100px;
   height: 25px;
-  background-color: #FFFFFF
+  color: #000000;
+  background-color: #FFFFFF;
+  margin-top: -6  0px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-style: none;
+}
+
+button[:hover] {
+  background-color: #c1c1c1;
 }
