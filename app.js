@@ -28,6 +28,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/homepage', homepage);
 app.use('/blog', blog);
+app.use('/snake', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
