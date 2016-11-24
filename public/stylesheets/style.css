@@ -5,11 +5,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 h2 {
   size: 1.5em;
 }
