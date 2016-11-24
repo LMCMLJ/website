@@ -25,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static('public'));
 app.use(partials());
 
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/homepage', homepage);
