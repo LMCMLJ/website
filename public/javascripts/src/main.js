@@ -2,35 +2,42 @@ window.onload = function () {
   var screen = document.getElementById("screen").getContext("2d");
   var tick = 0;
   var size = 20;
-  var canvasSize = 500;
-  var snake = new Snake(size, canvasSize, screen);
+  var canvasSizeHeight = 500;
+  var canvasSizeWidth = 800;
+  var snake = new Snake(size, screen);
   var collision = new Collision();
   var current_position = snake.head();
-  var food = new Food(collision, size, canvasSize, screen, snake);
+  var food = new Food(collision, size, screen, snake);
 
+  playMusic();
 
   function gameLoop(self) {
     tick++;
     if(tick === 1){
       setup();
     }
-    if(tick % 6 === 0) {
+    if(tick % 5 === 0) {
       update();
     }
     draw();
     requestAnimationFrame(gameLoop);
   }
 
+  function playMusic(){myAudio = new Audio('./img/tune.mp3');
+    myAudio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    myAudio.play();
+  }
+
   gameLoop(this);
 
-  function endGame() {
-    console.log("game over, snake died :( Your score: " + snake.position.length * 100);
-    document.getElementById("game").innerHTML = "game over, snake died :( Your score: " + snake.position.length * 100;
-      // hide canvas and show score page
+  function endGame(thing) {
+    window.location.replace("/snake");
   }
 
   window.addEventListener('keydown', doKeyDown, true);
-
 
   function setup() {
     food.printFood();
@@ -45,12 +52,18 @@ window.onload = function () {
 
   function draw() {
     clearScreen();
+    drawScore();
     food.printFood(snake);
     snake.drawSnake();
   }
 
   function clearScreen() {
-    screen.clearRect(0, 0, canvasSize, canvasSize);
+    screen.clearRect(0, 0, canvasSizeWidth,canvasSizeHeight);
+  }
+
+  function drawScore() {
+    screen.font = "30px Open Sans";
+    screen.fillText(food.score, 10, 40);
   }
 
   function doKeyDown(evt){
@@ -93,4 +106,5 @@ window.onload = function () {
   function move(direction){
     snake.direction = direction;
   }
+
 };
