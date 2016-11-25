@@ -3,6 +3,7 @@
   border-width: 2px;
   border-color: black;
   background-color: #93ce2d;
+  background-image:url("../img/grass.png");
 }
 
 article.content {

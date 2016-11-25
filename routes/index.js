@@ -10,9 +10,9 @@ router.get('/', function(req, res, next) {
   res.redirect('/homepage/');
 });
 
-router.get('/users', function(req, res) {
-  res.redirect('/users/');
-});
+// router.get('/users', function(req, res) {
+//   res.redirect('/users/');
+// });
 
 router.get('/blog', function(req, res) {
   res.redirect('/blog/recent');
