@@ -15,7 +15,7 @@ router.get('/users', function(req, res) {
 });
 
 router.get('/blog', function(req, res) {
-  res.redirect('/blog/');
+  res.redirect('/blog/recent');
 });
 
 router.get('/snake', function(req, res) {
