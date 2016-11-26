@@ -9,8 +9,6 @@ window.onload = function () {
   var current_position = snake.head();
   var food = new Food(collision, size, screen, snake);
 
-  playMusic();
-
   function gameLoop(self) {
     tick++;
     if(tick === 1){

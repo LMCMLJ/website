@@ -9,7 +9,11 @@
 article.content {
   margin-left: auto;
   margin-right: auto;
-  width: 504px;
+  width: 804px;
   height: 504px;
+  display: block;
+}
+
+#game {
   display: block;
 }
