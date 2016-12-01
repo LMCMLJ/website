@@ -9,6 +9,8 @@ window.onload = function () {
   var current_position = snake.head();
   var food = new Food(collision, size, screen, snake);
 
+  playMusic();
+
   function gameLoop(self) {
     tick++;
     if(tick === 1){
@@ -21,10 +23,18 @@ window.onload = function () {
     requestAnimationFrame(gameLoop);
   }
 
+  function playMusic(){myAudio = new Audio('./img/tune.mp3');
+    myAudio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    myAudio.play();
+  }
+
   gameLoop(this);
 
   function endGame(thing) {
-    window.location.replace("/snake");
+    window.location.replace("/highscore1997456/" + food.score);
   }
 
   window.addEventListener('keydown', doKeyDown, true);
