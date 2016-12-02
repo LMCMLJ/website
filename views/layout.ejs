@@ -6,28 +6,22 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <article id="header">
-      <a href="http://michaelcalvey.me/homepage/" method="get">
-        <div class="header_text">
-          <h2>Home</h2>
-        </div>
-      </a>
-      <a href="http://michaelcalvey.me/blog/" method="get">
-        <div class="header_text">
-          <h2>Blog</h2>
-        </div>
-      </a>
-      <a href="http://michaelcalvey.me/users/" method="get">
-        <div class="header_text">
-          <h2>Users</h2>
-        </div>
-      </a>
-      <a href="http://michaelcalvey.me/snake/" method="get">
-        <div class="header_text">
-          <h2>Snake</h2>
-        </div>
-      </a>
-    </article>
-    <%- body %>
+    <nav id="header">
+      <div id="header-text">
+        <a href="/"><h1>Michael Calvey</h1></a>
+      </div>
+      <div id="header-links">
+        <a href="/blog/" class="header-text">Blog</a>
+        <a href="/blog/" class="header-text">CV</a>
+        <a href="/blog/" class="header-text">Projects</a>
+        <a href="/blog/" class="header-text">This website</a>
+      </div>
+    </nav>
+    <nav id="content-main">
+      <%- body %>
+    </nav>
+    <nav id="footer">
+
+    </nav>
   </body>
 </html>
