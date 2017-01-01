@@ -7,7 +7,7 @@ app.use(partials());
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/homepage/');
+  res.render('homepage');
 });
 
 // router.get('/users', function(req, res) {
