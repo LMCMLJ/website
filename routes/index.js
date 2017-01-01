@@ -14,12 +14,8 @@ router.get('/', function(req, res, next) {
 //   res.redirect('/users/');
 // });
 
-router.get('/blog', function(req, res) {
-  res.redirect('/blog/recent');
-});
-
-router.get('/snake', function(req, res) {
-  res.render('snake');
+router.get('/cv', function(req, res) {
+  res.render('cv');
 });
 
 module.exports = router;

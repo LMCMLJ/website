@@ -59,6 +59,7 @@ a {
 #content {
   width: 800px;
   height: 800px;
+  padding: 15px;
   margin: auto;
   margin-top: 50px;
   display: block;
@@ -81,7 +82,7 @@ a {
 }
 
 #side-menu-form {
-  right: 0px;
+  padding-right: 20px;
 }
 
 .side-menu-button {
